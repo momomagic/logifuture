@@ -4,7 +4,7 @@ import org.logifuture.ksql.StreamCreator;
 
 public class KsqlWalletAbsoluteBalanceTable extends StreamCreator {
     public void create() {
-        String walletBalanceTable = "CREATE TABLE WALLET_ABS_BALANCE_STREAM AS "
+        String walletBalanceTable = "CREATE STREAM WALLET_ABS_BALANCE_STREAM AS "
                 + "SELECT walletID, transactionID,amount,currency,type,"
                 + "CASE  "
                 + "WHEN type = 'credit' THEN amount "

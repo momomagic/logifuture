@@ -16,7 +16,7 @@ conf = {'bootstrap.servers': 'localhost:9092',
 topic = 'WALLET_TRANSACTIONS'
 
 producer = SerializingProducer(conf)
-transaction_types = ['deposit', 'credit', 'cancelCredit', 'cancelDebit']
+transaction_types = ['debit', 'credit', 'cancelCredit', 'cancelDebit']
 
 
 def create_dummy_transaction():
